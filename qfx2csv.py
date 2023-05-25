@@ -10,10 +10,7 @@ with open(sys.argv[1], 'rb') as fileobj:
 
 
 statements = ofx.statements
-print(statements)
-
 transactions = statements[0].transactions
-print(transactions)
 for trx in transactions:
     print(str(trx.dtposted).split(' ')[0] + ',', end='')
     print(str(trx.fitid) + ',', end='')
